@@ -4,30 +4,27 @@ const db = firebase.firestore();
 // 사진 업로드 함수
 async function uploadPhoto() {
     const file = document.getElementById('photo-upload').files[0];
-    const name = document.getElementById('photo-name').value;
     const desc = document.getElementById('photo-desc').value;
 
-    if (!file || !name || !desc) {
-        alert('사진, 이름, 설명을 모두 입력해주세요!');
+    if (!file || !desc) {
+        alert('사진, 설명을 모두 입력해주세요!');
         return;
     }
 
     // Storage에 사진 업로드
-    const storageRef = storage.ref(`plants/${file.name}`);
+    const storageRef = storage.ref(`plants/${file.desc}`);
     await storageRef.put(file);
     const url = await storageRef.getDownloadURL();
 
     // Firestore에 데이터 저장
     await db.collection('plants').add({
         url: url,
-        name: name,
         description: desc,
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
     });
 
     // 입력 초기화
     document.getElementById('photo-upload').value = '';
-    document.getElementById('photo-name').value = '';
     document.getElementById('photo-desc').value = '';
 }
 
@@ -39,9 +36,9 @@ db.collection('plants').orderBy('timestamp', 'desc').onSnapshot(snapshot => {
         const data = doc.data();
         gallery.innerHTML += `
             <div class="photo-card">
-                <img src="${data.url}" alt="${data.name}">
+                <img src="${data.url}" alt="${data.desc}">
                 <div class="info">
-                    <h3>${data.name}</h3>
+                    <h3>${data.desc}</h3>
                     <p>${data.description}</p>
                 </div>
             </div>
