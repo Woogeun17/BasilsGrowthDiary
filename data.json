@@ -1,38 +1,12 @@
 [
-    {
-        "url": "images/basil1.jpeg",
-        "date": "2025-02-12"
-    },
-    {
-        "url": "images/basil2.jpeg",
-        "date": "2025-02-13"
-    },
-    {
-        "url": "images/basil3.jpeg",
-        "date": "2025-02-13"
-    },
-    {
-        "url": "images/basil4.heic",
-        "date": "2025-02-16"
-    },
-    {
-        "url": "images/basil5.heic",
-        "date": "2025-02-25"
-    },
-    {
-        "url": "images/basil6.heic",
-        "date": "2025-02-26"
-    },
-    {
-        "url": "images/basil7.jpeg",
-        "date": "2025-02-28"
-    },
-    {
-        "url": "images/basil8.jpeg",
-        "date": "2025-03-02"
-    },
-    {
-        "url": "images/basil9.jpeg",
-        "date": "2025-03-08"
-    }
+    { "url": "images/basil1.jpeg", "date": "2025-02-12"},
+    { "url": "images/basil2.jpeg", "date": "2025-02-13"},
+    { "url": "images/basil3.jpeg", "date": "2025-02-13"},
+    { "url": "images/basil4.heic", "date": "2025-02-16"},
+    { "url": "images/basil5.heic", "date": "2025-02-25"},
+    { "url": "images/basil6.heic", "date": "2025-02-26"},
+    { "url": "images/basil7.jpeg", "date": "2025-02-28"},
+    { "url": "images/basil8.jpeg", "date": "2025-03-02"},
+    { "url": "images/basil9.jpeg", "date": "2025-03-08"},
+    { "url": "images/basil10.jpeg", "date": "2025-03-13"}
 ]

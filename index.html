@@ -13,10 +13,16 @@
         <p>우리의 사랑스러운 바질 이야기 🌱</p>
     </header>
     <main>
-        <section class="gallery" id="gallery"></section>
+        <section class="latest-photo" id="latest-photo"></section>
+        <button class="back-btn" id="back-btn">캘린더 보기</button>
+        <section class="calendar" id="calendar" style="display: none;"></section>
+        <div class="modal" id="modal" style="display: none;">
+            <span class="close-btn" id="close-btn">&times;</span>
+            <img id="modal-image" src="" alt="확대된 바질">
+        </div>
     </main>
     <footer>
-        <p>© 바지리</p>
+        <p>© 2025</p>
     </footer>
     <script src="script.js"></script>
 </body>
