@@ -13,7 +13,7 @@ fetch('data.json')
                     <div class="info">
                         <h3>바질</h3>
                         <p>${item.date}</p>
-                        <p>${item.description || "설명 없음"}</p>
+                        <p>${item.description || ""}</p>
                     </div>
                 </div>
             `;
@@ -27,7 +27,7 @@ fetch('data.json')
                     <img src="${item.url}" alt="바질">
                     <div class="info">
                         <p>${item.date}</p>
-                        <p>${item.description || "설명 없음"}</p>
+                        <p>${item.description || ""}</p>
                     </div>
                 </div>
             `;
@@ -39,7 +39,7 @@ fetch('data.json')
             const isCalendarVisible = calendar.style.display === 'grid';
             calendar.style.display = isCalendarVisible ? 'none' : 'grid';
             photoGallery.style.display = isCalendarVisible ? 'flex' : 'none';
-            backBtn.textContent = isCalendarVisible ? '캘린더 보기' : '사진 보기';
+            backBtn.textContent = isCalendarVisible ? '목록 보기' : '큰 화면 보기';
         });
 
         // 사진 클릭 시 모달 열기
