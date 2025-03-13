@@ -48,13 +48,20 @@ h1 {
 .photo-item h3 {
     color: #4CAF50;
     font-size: 1.5em;
+    margin: 5px 0;
+}
+
+.photo-item p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #666;
 }
 
 /* 뒤로가기 버튼 */
 .back-btn {
     position: fixed;
     top: 20px;
-    left: 20px; /* 오른쪽 상단 → 왼쪽 상단 */
+    left: 20px;
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -103,8 +110,8 @@ h1 {
 }
 
 .calendar-item p {
-    margin: 0;
-    font-size: 0.9em;
+    margin: 2px 0;
+    font-size: 0.8em;
     color: #666;
 }
 
