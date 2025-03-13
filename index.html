@@ -13,18 +13,12 @@
         <p>우리의 사랑스러운 바질 이야기 🌱</p>
     </header>
     <main>
-        <section class="upload-section">
-            <input type="file" id="photo-upload" accept="image/*">
-            <input type="text" id="photo-desc" placeholder="설명 (예: 2025.03.13 - 물 준 날)">
-            <button onclick="uploadPhoto()">업로드</button>
-        </section>
         <section class="gallery" id="gallery"></section>
     </main>
     <footer>
         <p>© 바지리</p>
     </footer>
-
-    <!-- 외부 JS 파일 연결 -->
-    <script type="module" src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
