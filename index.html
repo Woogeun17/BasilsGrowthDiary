@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바지리 성장일기</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>바지리 성장일기</h1>
+        <p>바지리 🌱</p>
+    </header>
+    <main>
+        <section class="upload-section">
+            <input type="file" id="photo-upload" accept="image/*">
+            <input type="text" id="photo-name" placeholder="식물 이름">
+            <input type="text" id="photo-desc" placeholder="설명 (예: 2025.03.13 - 물 준 날)">
+            <button onclick="uploadPhoto()">업로드</button>
+        </section>
+        <section class="gallery" id="gallery"></section>
+    </main>
+    <footer>
+        <p>© 바지리</p>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js"></script>
+    <script>
+        // Firebase 설정 (Firebase 콘솔에서 가져오기)
+        const firebaseConfig = {
+            apiKey: "AIzaSyASQDqvtc2rxQn8MirC5MBWIqxSeEwsMVw",
+            authDomain: "basilsgrowthdiary.firebaseapp.com",
+            projectId: "basilsgrowthdiary",
+            storageBucket: "basilsgrowthdiary.firebasestorage.app",
+            messagingSenderId: "748159890040",
+            appId: "1:748159890040:web:6eeb0d5d0cad47b828338d",
+            measurementId: "G-ES95XVM5CM"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
