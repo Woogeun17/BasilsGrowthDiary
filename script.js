@@ -4,16 +4,19 @@ fetch('data.json')
         // 날짜 기준으로 정렬 (최신순)
         data.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-        // 최근 사진 표시
-        const latestPhoto = document.getElementById('latest-photo');
-        const latest = data[0];
-        latestPhoto.innerHTML = `
-            <img src="${latest.url}" alt="바질">
-            <div class="info">
-                <h3>바질</h3>
-                <p>${latest.date}</p>
-            </div>
-        `;
+        // 전체 사진 갤러리 표시
+        const photoGallery = document.getElementById('photo-gallery');
+        data.forEach(item => {
+            photoGallery.innerHTML += `
+                <div class="photo-item">
+                    <img src="${item.url}" alt="바질">
+                    <div class="info">
+                        <h3>바질</h3>
+                        <p>${item.date}</p>
+                    </div>
+                </div>
+            `;
+        });
 
         // 캘린더 생성
         const calendar = document.getElementById('calendar');
@@ -33,8 +36,8 @@ fetch('data.json')
         backBtn.addEventListener('click', () => {
             const isCalendarVisible = calendar.style.display === 'grid';
             calendar.style.display = isCalendarVisible ? 'none' : 'grid';
-            latestPhoto.style.display = isCalendarVisible ? 'block' : 'none';
-            backBtn.textContent = isCalendarVisible ? '캘린더 보기' : '최신 사진 보기';
+            photoGallery.style.display = isCalendarVisible ? 'flex' : 'none';
+            backBtn.textContent = isCalendarVisible ? '캘린더 보기' : '사진 보기';
         });
 
         // 사진 클릭 시 모달 열기
